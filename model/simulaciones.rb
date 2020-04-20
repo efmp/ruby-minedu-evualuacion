@@ -16,13 +16,17 @@ class Simulacion
 
 	def verificarRespuestaCorrecta()
 		pregunta = evaluacion.pregunta[0]
-		if pregunta.respuesta[0].codigo == respuesta.codigo
-			then 
-				if pregunta.respuesta[0].respuestaValida == true
-					then puntaje+= 10
-				end
-		end
 
+		for pregunta in evaluacion.pregunta
+			for rpta in pregunta.respuesta
+				if rpta.codigo == respuesta.codigo
+					then 
+						if rpta.respuestaValida == true
+							then puntaje+= 10
+						end						
+				end
+			end
+		end
 	end
 
 end
