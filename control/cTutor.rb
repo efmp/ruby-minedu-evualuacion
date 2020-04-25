@@ -8,20 +8,13 @@ class Tutor_Controlador
 		@modelo = modelo
 	end
 
-	def mostrarTutores()
+	def registrarTutor(codigo, dni, apellidos, nombre, parentesco)
+		tutor = Tutor.new(codigo, dni, apellidos, nombre, parentesco)
+		modelo.registrarTutor(tutor)
+	end
+
+	def listarTutores()
 		vista.mostrarTutores(modelo.tutores)
 	end
 
 end
-
-vista = VistaTutor.new
-modelo = Tutor_Modelo.new
-t1 = Tutor.new("t1", "8855447711", "Jimenez Peralta", "Pedro", "Padre")
-t2 = Tutor.new("t2", "8855447711", "Rosas Pinedo", "Liliana", "Madre")
-t3 = Tutor.new("t3", "8855447711", "Casas Escobar", "Piero", "Padre")
-modelo.registrarTutor(t1)
-modelo.registrarTutor(t2)
-modelo.registrarTutor(t3)
-
-control = Tutor_Controlador.new(vista,modelo)
-control.mostrarTutores

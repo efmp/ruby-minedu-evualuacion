@@ -1,9 +1,8 @@
 class Colegio
-	attr_accessor :codigo, :nombre, :tipo
-	def initialize(codigo, nombre, tipo)
+	attr_accessor :codigo, :nombre
+	def initialize(codigo, nombre)
 		@codigo = codigo
 		@nombre = nombre
-		@tipo = tipo
 	end
 
 	def calcularCalificacionSocioEconomica()
@@ -11,8 +10,8 @@ class Colegio
 end
 class ColegioNacional < Colegio
 		attr_accessor :zona
-	def initialize(codigo, nombre,tipo, zona)
-		super(codigo, nombre, tipo)
+	def initialize(codigo, nombre, zona)
+		super(codigo, nombre)
 		@zona = zona
 	end
 
@@ -25,8 +24,8 @@ class ColegioNacional < Colegio
 end
 class ColegioParticular < Colegio
 	attr_accessor :montoPension
-	def initialize(codigo, nombre,tipo , montoPension)
-		super(codigo, nombre, tipo)
+	def initialize(codigo, nombre, montoPension)
+		super(codigo, nombre)
 		@montoPension = montoPension
 	end
 

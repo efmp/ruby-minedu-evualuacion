@@ -1,4 +1,6 @@
-class VistaTutor 
+class Tutor_Vista 
+	def initialize
+	end
 	def mostrarTutores(tutores)
 		puts "LISTA DE TUTORES"
 		for t in tutores
