@@ -31,9 +31,7 @@ class AlumnoColegio
 end
 
 #TUTORES
-t1 = Tutor.new("t1", "8855447711", "Jimenez Peralta", "Pedro", "Padre")
-t2 = Tutor.new("t2", "8855447711", "Rios Rojas", "Lia", "Madre")
-t3 = Tutor.new("t3", "8855447711", "Casas Escobar", "Piero", "Padre")
+
 #COLEGIOS
 c1 = ColegioNacional.new("col001", "Villareal","Nacional","Rural")
 c2 = ColegioParticular.new("col001", "Jose Galvez","Particular",300)
@@ -60,7 +58,4 @@ puts ac2.colegio.calcularCalificacionSocioEconomica
 puts "Alumno 1:  #{ac1.alumno.nombre} #{ac1.alumno.apellidos} #{ac1.colegio.tipo} #{ac1.colegio.calcularCalificacionSocioEconomica} #{ac1.calcularPuntajeRendimiento}"
 puts "Alumno 2:  #{ac2.alumno.nombre} #{ac2.alumno.apellidos} #{ac2.colegio.tipo} #{ac2.colegio.calcularCalificacionSocioEconomica} #{ac2.calcularPuntajeRendimiento}"
 
-puts "LISTA DE TUTORES"
-for t in a1.tutor
-puts t.nombre
-end
+
