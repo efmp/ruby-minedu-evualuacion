@@ -25,3 +25,7 @@ calumno = Alumno_Controlador.new(valumno,malumno)
 calumno.registrarAlumnos("a1", "Jimenez Caceres", "Eduardo", "14", "M")
 calumno.registrarAlumnos("a2", "Morales Salvatierra", "Eva", "14", "F")
 calumno.listarAlumnos
+
+#calificacion alumno -detalle alumno
+
+
