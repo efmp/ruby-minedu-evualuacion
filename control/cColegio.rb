@@ -23,6 +23,15 @@ class ControladorColegio
 		end
 	end
 
+	def obtenerColegio(codColegio)
+		colegios = modelo.colegios
+		for colegio in colegios
+			if(colegio.codigo.eql? codColegio) then 
+				return colegio
+			end
+		end
+	end
+
 	def listarColegios
 		vista.mostrarColegios(modelo.colegios)
 	end

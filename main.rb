@@ -34,5 +34,12 @@ calumno.registrarTutor("a1", tutor3)
 calumno.registrarTutor("a2", tutor3)
 calumno.listarAlumnos
 #calificacion alumno -detalle alumno
+colegio1 = ccolegio.obtenerColegio("col001")
+colegio2 = ccolegio.obtenerColegio("col002")
+alumno1 = calumno.obtenerAlumno("a1")
+alumno2 = calumno.obtenerAlumno("a2")
+calumno.registrarDetalleAlumno(alumno1, colegio1, "2", 16, nil)
+calumno.registrarDetalleAlumno(alumno2, colegio2, "2", nil, 5)
+calumno.listarAlumnosConDetalle
 
 

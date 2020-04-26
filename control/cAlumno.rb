@@ -23,14 +23,27 @@ class Alumno_Controlador
 		end
 	end
 
-	def  registrarTutor(codalumno, tutor)
-		alumno = obtenerAlumno(codalumno)
+	def  registrarTutor(codAlumno, tutor)
+		alumno = obtenerAlumno(codAlumno)
 		alumno.registrarTutor(tutor)
 	end
+
+	def registrarDetalleAlumno(codAlumno, classColegio, nivel, promedioPonderado, puesto)
+		detalle = AlumnoDetalle.new(codAlumno, classColegio, nivel, promedioPonderado, puesto)
+		modelo.registrarDetalleAlumno(detalle)
+	end
+
+
 
 	def listarAlumnos
 		vista.listarAlumnos(modelo.alumnos)
 	end
+
+	def listarAlumnosConDetalle
+		vista.listarAlumnosConDetalle(modelo.alumnos,modelo.detalleAlumnos)
+	end
+
+
 end
 
 

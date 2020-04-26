@@ -1,6 +1,6 @@
 require_relative "../../control/cTutor.rb"
 require_relative "../../control/cColegio.rb"
-class AlumnoColegio
+class AlumnoDetalle
 	attr_accessor  :alumno, :colegio, :nivel, :promedioPonderado, :puesto
 	def initialize(codigoAlumno, codigoColegio,nivel, promedioPonderado, puesto)
 		@alumno = codigoAlumno
