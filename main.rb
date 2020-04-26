@@ -5,9 +5,9 @@ require_relative "control/cAlumno.rb"
 vtutor = Tutor_Vista.new
 mtutor = Tutor_Modelo.new
 ctutor = Tutor_Controlador.new(vtutor,mtutor)
-ctutor.registrarTutor("t1", "8855447711", "Jimenez Peralta", "Pedro", "Padre")
-ctutor.registrarTutor("t2", "8855447711", "Rosas Pinedo", "Liliana", "Madre")
-ctutor.registrarTutor("t3", "8855447711", "Casas Escobar", "Piero", "Padre")
+ctutor.registrarTutor("tutor1", "8855447711", "Jimenez Peralta", "Pedro", "Padre")
+ctutor.registrarTutor("tutor2", "8855447711", "Rosas Pinedo", "Liliana", "Madre")
+ctutor.registrarTutor("tutor3", "8855447711", "Casas Escobar", "Piero", "Padre")
 ctutor.listarTutores
 
 #colegios
@@ -24,8 +24,15 @@ malumno = Alumno_Modelo.new
 calumno = Alumno_Controlador.new(valumno,malumno)
 calumno.registrarAlumnos("a1", "Jimenez Caceres", "Eduardo", "14", "M")
 calumno.registrarAlumnos("a2", "Morales Salvatierra", "Eva", "14", "F")
+#registrar tutores
+tutor1 = ctutor.obtenerTutor("tutor1")
+tutor2 = ctutor.obtenerTutor("tutor2")
+tutor3 = ctutor.obtenerTutor("tutor3")
+calumno.registrarTutor("a1", tutor1) #registrar <codigo de alumno>, <class tutor>
+calumno.registrarTutor("a1", tutor2)
+calumno.registrarTutor("a1", tutor3)
+calumno.registrarTutor("a2", tutor3)
 calumno.listarAlumnos
-
 #calificacion alumno -detalle alumno
 
 

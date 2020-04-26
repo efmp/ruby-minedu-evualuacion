@@ -10,9 +10,22 @@ class Alumno_Controlador
 	end
 
 	def registrarAlumnos(*args)
-
 		alumno = Alumno.new(*args)
 		modelo.registrarAlumnos(alumno)
+	end
+
+	def obtenerAlumno(codAlumno)
+		alumnos = modelo.alumnos
+		for alumno in alumnos
+			if(alumno.codigo.eql? codAlumno) then 
+				return alumno
+			end
+		end
+	end
+
+	def  registrarTutor(codalumno, tutor)
+		alumno = obtenerAlumno(codalumno)
+		alumno.registrarTutor(tutor)
 	end
 
 	def listarAlumnos

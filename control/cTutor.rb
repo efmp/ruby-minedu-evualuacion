@@ -13,6 +13,15 @@ class Tutor_Controlador
 		modelo.registrarTutor(tutor)
 	end
 
+	def obtenerTutor(codTutor)
+		tutores = modelo.tutores
+		for tutor in tutores
+			if(tutor.codigo.eql? codTutor) then 
+				return tutor
+			end
+		end
+	end
+
 	def listarTutores()
 		vista.mostrarTutores(modelo.tutores)
 	end
